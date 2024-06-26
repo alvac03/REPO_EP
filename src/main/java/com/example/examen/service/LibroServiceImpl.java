@@ -21,6 +21,11 @@ public class LibroServiceImpl implements LibroService {
     }
 
     @Override
+    public List<Libro> listaPorCategorias(List<String> categories) {
+        return repository.listaPorCategorias(categories);
+    }
+
+    @Override
     public Libro agregarActualizarLibro(Libro objLibro) {
         return repository.save(objLibro);
     }
